@@ -11,7 +11,7 @@
     "nuxt": "3.0.0-rc.13"
   },
   "dependencies": {
-    "@prisma/client": "4.6.1",
+    "@prisma/client": "^4.6.1",
     "prisma": "^4.6.1"
   }
 }
