@@ -13,7 +13,7 @@ async function createContact() {
     method: "POST",
     body: data,
   });
-  console.log(error);
+
   if (contact.value && !error.value) {
     router.push("/");
   }
