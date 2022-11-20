@@ -4,7 +4,7 @@ const prisma = new PrismaClient();
 
 export default defineEventHandler(async (event) => {
   const query = getRouterParams(event);
-  const body = await useBody(event);
+  const body = await readBody(event);
 
   try {
     const contacts = await prisma.contact.update({

@@ -31,28 +31,26 @@ async function createContact() {
         </button>
       </NuxtLink>
     </Heading>
-    <form class="bg-red-500 p-5" @submit.prevent="createContact">
-      <input
-        type="text"
-        name="firstName"
-        id="firstName"
-        v-model="data.firstName"
-      />
-      <input
-        type="text"
-        name="lastName"
-        id="lastName"
-        v-model="data.lastName"
-      />
-      <input type="text" name="email" id="email" v-model="data.email" />
-      <input
-        type="text"
-        name="phoneNumber"
-        id="phoneNumber"
-        v-model="data.phoneNumber"
-      />
+    <form class="p-5" @submit.prevent="createContact">
+      <InputWrapper>
+        <Input v-model="data.firstName" type="text" title="Primeiro Nome" />
+      </InputWrapper>
+      <InputWrapper>
+        <Input v-model="data.lastName" type="text" title="Último Nome" />
+      </InputWrapper>
+      <InputWrapper>
+        <Input v-model="data.email" type="text" title="E-mail" />
+      </InputWrapper>
+      <InputWrapper>
+        <Input v-model="data.phoneNumber" type="text" title="Telefone" />
+      </InputWrapper>
 
-      <button type="submit">Criar</button>
+      <button
+        class="bg-blue-600 hover:bg-blue-800 text-white px-5 py-3 rounded-lg w-full"
+        type="submit"
+      >
+        Criar
+      </button>
     </form>
   </div>
 </template>
